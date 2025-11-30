@@ -1,0 +1,18 @@
+PATIENT|P0001|John Doe|081234567890|Jl. Merdeka No. 123, Jakarta|15/05/1990|M|O
+PATIENT|P0002|Jane Smith|081234567891|Jl. Sudirman No. 45, Jakarta|20/08/1985|F|A
+PATIENT|P0003|Robert Johnson|081234567892|Jl. Gatot Subroto No. 78, Bandung|10/12/1978|M|B
+PATIENT|P0004|Maria Garcia|081234567893|Jl. Ahmad Yani No. 12, Surabaya|25/03/1992|F|AB
+PATIENT|P0005|David Lee|081234567894|Jl. Diponegoro No. 56, Semarang|05/07/1988|M|O
+DOCTOR|D0001|Dr. Sarah Williams|021-5551234|Jl. Thamrin No. 100, Jakarta|Cardiology|SIP-001-2020|Mon-Fri 09:00-17:00
+DOCTOR|D0002|Dr. Michael Brown|021-5551235|Jl. Kuningan No. 88, Jakarta|Pediatrics|SIP-002-2019|Mon-Fri 08:00-16:00
+DOCTOR|D0003|Dr. Emily Davis|021-5551236|Jl. Senopati No. 67, Jakarta|Orthopedics|SIP-003-2021|Tue-Sat 10:00-18:00
+DOCTOR|D0004|Dr. James Wilson|021-5551237|Jl. Kemang No. 45, Jakarta|General Practice|SIP-004-2018|Mon-Sat 08:00-20:00
+DOCTOR|D0005|Dr. Lisa Anderson|021-5551238|Jl. Menteng No. 23, Jakarta|Dermatology|SIP-005-2022|Mon-Fri 13:00-21:00
+APPOINTMENT|A0001|P0001|D0001|25/11/2025|09:00|completed|Regular checkup
+APPOINTMENT|A0002|P0002|D0002|25/11/2025|10:00|completed|Child vaccination
+APPOINTMENT|A0003|P0003|D0003|26/11/2025|14:00|scheduled|Knee pain consultation
+APPOINTMENT|A0004|P0004|D0004|26/11/2025|15:30|scheduled|Annual health screening
+APPOINTMENT|A0005|P0005|D0005|27/11/2025|16:00|scheduled|Skin rash treatment
+APPOINTMENT|A0006|P0001|D0004|28/11/2025|11:00|scheduled|Follow-up appointment
+MEDICALRECORD|R0001|A0001|Hypertension Stage 1|Lifestyle modification and blood pressure monitoring|Lisinopril 10mg once daily|25/11/2025
+MEDICALRECORD|R0002|A0002|Routine immunization|Administered DTP and Polio vaccines|No prescription required|25/11/2025
