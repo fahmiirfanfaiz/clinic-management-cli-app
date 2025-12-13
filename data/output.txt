@@ -8,6 +8,7 @@ DOCTOR|D0002|Dr. Michael Brown|021-5551235|Jl. Kuningan No. 88, Jakarta|Pediatri
 DOCTOR|D0003|Dr. Emily Davis|021-5551236|Jl. Senopati No. 67, Jakarta|Orthopedics|SIP-003-2021|Tue-Sat 10:00-18:00
 DOCTOR|D0004|Dr. James Wilson|021-5551237|Jl. Kemang No. 45, Jakarta|General Practice|SIP-004-2018|Mon-Sat 08:00-20:00
 DOCTOR|D0005|Dr. Lisa Anderson|021-5551238|Jl. Menteng No. 23, Jakarta|Dermatology|SIP-005-2022|Mon-Fri 13:00-21:00
+DOCTOR|D0006|Fahmi Irfan Faiz|1|k|k|9|Mon-Fri 10:00-18:00
 APPOINTMENT|A0001|P0001|D0001|25/11/2025|09:00|completed|Regular checkup
 APPOINTMENT|A0002|P0002|D0002|25/11/2025|10:00|completed|Child vaccination
 APPOINTMENT|A0003|P0003|D0003|26/11/2025|14:00|scheduled|Knee pain consultation

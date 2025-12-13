@@ -103,15 +103,15 @@ Proyek/
 ### Windows (MinGW/g++)
 
 ```bash
-g++ -I include -o klinik src/*.cpp -std=c++11
-klinik.exe
+g++ -I include -o Klinik.exe src/*.cpp -std=c++11
+Klinik.exe
 ```
 
 ### Linux/Mac
 
 ```bash
-g++ -I include -o klinik src/*.cpp -std=c++11
-./klinik
+g++ -I include -o Klinik src/*.cpp -std=c++11
+./Klinik
 ```
 
 ## Prinsip OOP yang Diterapkan

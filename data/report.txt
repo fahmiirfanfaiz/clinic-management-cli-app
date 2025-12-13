@@ -1,0 +1,89 @@
+========================================
+     CLINIC MANAGEMENT SYSTEM REPORT    
+========================================
+
+SUMMARY:
+Total Patients        : 5
+Total Doctors         : 5
+Total Appointments    : 0
+Total Medical Records : 0
+
+
+========================================
+           PATIENT LIST                 
+========================================
+
+ID: P0001
+Name: John Doe
+Gender: M
+Blood Type: O
+Phone: 081234567890
+----------------------------------------
+
+ID: P0002
+Name: Jane Smith
+Gender: F
+Blood Type: A
+Phone: 081234567891
+----------------------------------------
+
+ID: P0003
+Name: Robert Johnson
+Gender: M
+Blood Type: B
+Phone: 081234567892
+----------------------------------------
+
+ID: P0004
+Name: Maria Garcia
+Gender: F
+Blood Type: AB
+Phone: 081234567893
+----------------------------------------
+
+ID: P0005
+Name: David Lee
+Gender: M
+Blood Type: O
+Phone: 081234567894
+----------------------------------------
+
+
+========================================
+           DOCTOR LIST                  
+========================================
+
+ID: D0001
+Name: Dr. Sarah Williams
+Specialization: Cardiology
+License: SIP-001-2020
+Phone: 021-5551234
+----------------------------------------
+
+ID: D0002
+Name: Dr. Michael Brown
+Specialization: Pediatrics
+License: SIP-002-2019
+Phone: 021-5551235
+----------------------------------------
+
+ID: D0003
+Name: Dr. Emily Davis
+Specialization: Orthopedics
+License: SIP-003-2021
+Phone: 021-5551236
+----------------------------------------
+
+ID: D0004
+Name: Dr. James Wilson
+Specialization: General Practice
+License: SIP-004-2018
+Phone: 021-5551237
+----------------------------------------
+
+ID: D0005
+Name: Dr. Lisa Anderson
+Specialization: Dermatology
+License: SIP-005-2022
+Phone: 021-5551238
+----------------------------------------

@@ -2,7 +2,7 @@
 
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -I include
-TARGET = klinik
+TARGET = Klinik
 SRCDIR = src
 OBJDIR = obj
 INCDIR = include
