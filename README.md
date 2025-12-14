@@ -21,7 +21,13 @@ Fitur utama meliputi manajemen pasien, manajemen dokter, penjadwalan appointment
 | 2   | Fahmi Irfan Faiz     | 23/520563/TK/57396 |
 | 3   | Kalya Naura Farabias | 24/541690/TK/60097 |
 
-## 📂 Struktur Folder
+## � URL Video Demo dan Laporan
+
+[📁 Tautan Google Drive Laporan Proyek](https://drive.google.com/drive/folders/1nU343sm0QTZcvXlbYDhWH-sUh0z6_rFZ?usp=drive_link)
+
+[📁 Tautan Google Drive Video Demo Aplikasi](https://drive.google.com/drive/folders/1vPNhFnTwYr_h1fu4PEHFodfhGhNrLXcH?usp=drive_link)
+
+## �📂 Struktur Folder
 
 ```
 Clinic Management CLI App/
@@ -31,10 +37,9 @@ Clinic Management CLI App/
 │   ├── output.txt                # Auto-generated output
 │   └── report.txt                # Generated reports
 │
-├── docs/                                # Documentation folder
-│   ├── use_case_diagram.png             # Use case diagram
-│   ├── class_diagram.png                # Class diagram
-│   └── 515523-520563-541690_Project.pdf # Project report
+├── docs/                         # Documentation folder
+│   ├── use_case_diagram.png      # Use case diagram
+│   └── class_diagram.png         # Class diagram
 │
 ├── include/                      # Header files (.h)
 │   ├── Person.h                  # Base class for person entities
@@ -55,6 +60,7 @@ Clinic Management CLI App/
 │   ├── FileHandler.cpp           # File handler implementation
 │   └── main.cpp                  # Main entry point
 │
+├── LICENSE                       # MIT License file
 ├── Makefile                      # Build configuration for Unix/Linux
 ├── build.ps1                     # Build script for Windows PowerShell
 ├── build.sh                      # Build script for Linux/Mac
@@ -318,5 +324,5 @@ Copyright (c) 2025 Kistosi Al Ghifari, Fahmi Irfan Faiz, Kalya Naura Farabias
 ---
 
 **Dikembangkan sebagai proyek mata kuliah Pemrograman Dasar**  
-Departemen Teknik Elektro dan Teknologi Informasi, Universitas Gadjah Mada  
+Departemen Teknik Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada 
 © 2025
