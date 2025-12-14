@@ -1,126 +1,322 @@
-# Aplikasi Manajemen Klinik
+# Clinic Management CLI App
 
-## Deskripsi Proyek
+## 📌 Deskripsi Aplikasi
 
-Aplikasi Manajemen Klinik adalah sistem berbasis CLI (Command Line Interface) untuk mengelola data pasien, dokter, jadwal appointment, dan rekam medis di klinik kesehatan.
+Clinic Management CLI App adalah sebuah aplikasi berbasis Command Line Interface (CLI) yang dirancang untuk mendukung manajemen operasional klinik kesehatan. Aplikasi ini dikembangkan untuk mengintegrasikan seluruh proses pengelolaan data klinik, mulai dari registrasi pasien, penjadwalan appointment, manajemen dokter, hingga pencatatan rekam medis.
 
-## Permasalahan dan Kebutuhan
+Aplikasi ini hadir sebagai solusi atas permasalahan umum dalam pengelolaan klinik, seperti:
 
-### Permasalahan
+- **Pengelolaan Data Manual** yang rawan kesalahan dan memakan waktu
+- **Kesulitan Pencarian** riwayat pasien atau jadwal dokter dengan cepat
+- **Data Tidak Terintegrasi** dimana informasi pasien, dokter, dan appointment tersebar
+- **Risiko Kehilangan Data** akibat pencatatan dalam bentuk kertas yang mudah hilang atau rusak
 
-1. **Pengelolaan Data Manual**: Klinik masih menggunakan pencatatan manual yang rawan kesalahan
-2. **Kesulitan Pencarian**: Sulit mencari riwayat pasien atau jadwal dokter dengan cepat
-3. **Tidak Terintegrasi**: Data pasien, dokter, dan appointment terpisah-pisah
-4. **Risiko Kehilangan Data**: Data dalam bentuk kertas mudah hilang atau rusak
+Fitur utama meliputi manajemen pasien, manajemen dokter, penjadwalan appointment, pencatatan rekam medis, serta persistensi data otomatis. Melalui fitur-fitur ini, Clinic Management CLI App memungkinkan pencatatan data yang terstruktur, pencarian informasi yang cepat, serta backup data yang aman. Dengan demikian, aplikasi ini tidak hanya mempermudah staf klinik dalam mengelola data harian, tetapi juga membantu dokter dalam mengakses riwayat pasien dan meningkatkan kualitas layanan kesehatan secara keseluruhan.
 
-### Kebutuhan Aplikasi
+## ✨ Nama Kelompok dan Daftar Anggota
 
-1. **Manajemen Pasien**: Menambah, edit, hapus, dan menampilkan data pasien
-2. **Manajemen Dokter**: Mengelola informasi dokter dan spesialisasi
-3. **Manajemen Appointment**: Penjadwalan kunjungan pasien dengan dokter
-4. **Rekam Medis**: Mencatat diagnosis dan treatment pasien
-5. **Persistensi Data**: Load dan save data dari/ke file
-6. **Navigasi Mudah**: Interface yang user-friendly
+| No  | Nama                 | NIM                |
+| --- | -------------------- | ------------------ |
+| 1   | Kistosi Al Ghifari   | 23/515523/TK/56680 |
+| 2   | Fahmi Irfan Faiz     | 23/520563/TK/57396 |
+| 3   | Kalya Naura Farabias | 24/541690/TK/60097 |
 
-## Fitur Utama
+## 📂 Struktur Folder
 
-### 1. Manajemen Pasien
+```
+Clinic Management CLI App/
+│
+├── data/                         # Data storage files
+│   ├── input.txt                 # Input data source
+│   ├── output.txt                # Auto-generated output
+│   └── report.txt                # Generated reports
+│
+├── docs/                         # Documentation folder
+│   ├── use_case_diagram.md       # Use case diagram
+│   ├── class_diagram.md          # Class diagram
+│   └── laporan.md                # Project report
+│
+├── include/                      # Header files (.h)
+│   ├── Person.h                  # Base class for person entities
+│   ├── Patient.h                 # Patient class (inherits Person)
+│   ├── Doctor.h                  # Doctor class (inherits Person)
+│   ├── Appointment.h             # Appointment management
+│   ├── MedicalRecord.h           # Medical record management
+│   ├── ClinicManager.h           # Core clinic operations
+│   └── FileHandler.h             # File I/O operations
+│
+├── src/                          # Source files (.cpp)
+│   ├── Person.cpp                # Person implementation
+│   ├── Patient.cpp               # Patient implementation
+│   ├── Doctor.cpp                # Doctor implementation
+│   ├── Appointment.cpp           # Appointment implementation
+│   ├── MedicalRecord.cpp         # Medical record implementation
+│   ├── ClinicManager.cpp         # Clinic manager implementation
+│   ├── FileHandler.cpp           # File handler implementation
+│   └── main.cpp                  # Main entry point
+│
+├── Makefile                      # Build configuration for Unix/Linux
+├── build.ps1                     # Build script for Windows PowerShell
+├── build.sh                      # Build script for Linux/Mac
+└── README.md                     # Project documentation
+```
 
-- Registrasi pasien baru
-- Update informasi pasien
-- Hapus data pasien
-- Tampilkan daftar pasien
-- Cari pasien berdasarkan ID atau nama
+## 💡 Fitur Aplikasi
 
-### 2. Manajemen Dokter
+### 1️⃣ **Manajemen Pasien**
 
-- Tambah dokter baru
-- Update informasi dokter
-- Hapus data dokter
-- Tampilkan daftar dokter berdasarkan spesialisasi
-- Cari dokter berdasarkan ID
+| Fitur                       | Deskripsi                                                                                                            |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Registrasi Pasien**       | Mendaftarkan pasien baru dengan informasi lengkap (ID, nama, telepon, alamat, tanggal lahir, gender, golongan darah) |
+| **Update Data Pasien**      | Mengubah informasi pasien yang sudah terdaftar                                                                       |
+| **Hapus Pasien**            | Menghapus data pasien dari sistem                                                                                    |
+| **Tampilkan Daftar Pasien** | Melihat semua pasien yang terdaftar dalam format tabel                                                               |
+| **Cari Pasien**             | Mencari pasien berdasarkan ID atau nama                                                                              |
 
-### 3. Manajemen Appointment
+### 2️⃣ **Manajemen Dokter**
 
-- Buat appointment baru
-- Update status appointment (scheduled, completed, cancelled)
-- Hapus appointment
-- Tampilkan jadwal appointment
-- Filter appointment berdasarkan tanggal/dokter/pasien
+| Fitur                       | Deskripsi                                                               |
+| --------------------------- | ----------------------------------------------------------------------- |
+| **Tambah Dokter**           | Menambahkan dokter baru dengan informasi spesialisasi dan nomor lisensi |
+| **Update Data Dokter**      | Mengubah informasi dokter termasuk jadwal praktik                       |
+| **Hapus Dokter**            | Menghapus data dokter dari sistem                                       |
+| **Tampilkan Daftar Dokter** | Melihat semua dokter berdasarkan spesialisasi                           |
+| **Cari Dokter**             | Mencari dokter berdasarkan ID atau spesialisasi                         |
 
-### 4. Rekam Medis
+### 3️⃣ **Manajemen Appointment**
 
-- Catat diagnosis dan treatment
-- Tampilkan riwayat medis pasien
-- Update rekam medis
+| Fitur                  | Deskripsi                                                     |
+| ---------------------- | ------------------------------------------------------------- |
+| **Buat Appointment**   | Membuat jadwal kunjungan pasien dengan dokter tertentu        |
+| **Update Status**      | Mengubah status appointment (Scheduled, Completed, Cancelled) |
+| **Hapus Appointment**  | Membatalkan dan menghapus appointment                         |
+| **Tampilkan Jadwal**   | Melihat semua appointment yang terjadwal                      |
+| **Filter Appointment** | Filter berdasarkan tanggal, dokter, atau pasien tertentu      |
 
-### 5. File Management
+### 4️⃣ **Rekam Medis**
 
-- Load data dari input.txt saat aplikasi dimulai
-- Auto-save perubahan ke output.txt
-- Export laporan
+| Fitur                  | Deskripsi                                     |
+| ---------------------- | --------------------------------------------- |
+| **Catat Diagnosis**    | Mencatat diagnosis dan treatment untuk pasien |
+| **Riwayat Medis**      | Melihat seluruh riwayat medis pasien          |
+| **Update Rekam Medis** | Mengubah catatan diagnosis atau treatment     |
+| **Export Laporan**     | Generate laporan medis dalam format text      |
 
-## Teknologi
+### 5️⃣ **File Management**
 
-- **Bahasa**: C++ (C++11 atau lebih tinggi)
+| Fitur              | Deskripsi                                                               |
+| ------------------ | ----------------------------------------------------------------------- |
+| **Auto-Load Data** | Otomatis membaca dan memuat data dari `input.txt` saat aplikasi dimulai |
+| **Auto-Save Data** | Otomatis menyimpan perubahan ke `output.txt` saat aplikasi ditutup      |
+| **Export Report**  | Generate laporan statistik ke file `report.txt`                         |
+
+## ⚙️ Teknologi yang Digunakan
+
+- **Bahasa Pemrograman**: C++ (Standard C++11)
+- **Compiler**: g++ 15.1.0 atau lebih tinggi (MinGW/MSYS2 untuk Windows, GCC untuk Linux)
 - **Paradigma**: Object-Oriented Programming (OOP)
 - **Interface**: Command Line Interface (CLI)
-- **Storage**: Text file (input.txt, output.txt)
+- **Storage**: Text File (pipe-delimited format)
+- **Build Tools**:
+  - Make (Makefile untuk Unix/Linux)
+  - PowerShell Script (build.ps1 untuk Windows)
+  - Bash Script (build.sh untuk Linux/Mac)
+- **Version Control**: Git
+- **Development Environment**: Visual Studio Code / Code::Blocks / CLion
 
-## Struktur Proyek
+## ⚒️ Instalasi dan Cara Build
 
-```
-Proyek/
-├── include/
-│   ├── Person.h
-│   ├── Patient.h
-│   ├── Doctor.h
-│   ├── Appointment.h
-│   ├── MedicalRecord.h
-│   ├── ClinicManager.h
-│   └── FileHandler.h
-├── src/
-│   ├── Person.cpp
-│   ├── Patient.cpp
-│   ├── Doctor.cpp
-│   ├── Appointment.cpp
-│   ├── MedicalRecord.cpp
-│   ├── ClinicManager.cpp
-│   ├── FileHandler.cpp
-│   └── main.cpp
-├── data/
-│   ├── input.txt
-│   └── output.txt
-├── docs/
-│   ├── use_case_diagram.md
-│   ├── class_diagram.md
-│   └── laporan.md
-└── README.md
-```
+### Prasyarat
 
-## Cara Kompilasi dan Menjalankan
+Pastikan Anda telah menginstall:
 
-### Windows (MinGW/g++)
+- **Windows**: MinGW-w64 atau MSYS2 dengan g++ compiler
+- **Linux**: GCC/g++ (install dengan `sudo apt install g++ make`)
+- **macOS**: Xcode Command Line Tools (install dengan `xcode-select --install`)
+
+### 1. Clone Repository
 
 ```bash
-g++ -I include -o Klinik.exe src/*.cpp -std=c++11
-Klinik.exe
+git clone <repository-url>
+cd "Clinic Management CLI App"
 ```
 
-### Linux/Mac
+### 2. Build Aplikasi
+
+#### **Opsi A: Menggunakan Makefile (Linux/Mac/Windows dengan Make)**
 
 ```bash
-g++ -I include -o Klinik src/*.cpp -std=c++11
+make
+```
+
+Output akan menghasilkan file executable `Klinik.exe` (Windows) atau `Klinik` (Linux/Mac).
+
+#### **Opsi B: Menggunakan Build Script Windows (PowerShell)**
+
+```powershell
+.\build.ps1
+```
+
+Atau jika terkena execution policy error:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\build.ps1
+```
+
+#### **Opsi C: Menggunakan Build Script Linux/Mac (Bash)**
+
+```bash
+chmod +x build.sh
+./build.sh
+```
+
+#### **Opsi D: Manual Compilation**
+
+**Windows:**
+
+```bash
+g++ -I include -o Klinik.exe src/*.cpp -std=c++11 -Wall
+```
+
+**Linux/Mac:**
+
+```bash
+g++ -I include -o Klinik src/*.cpp -std=c++11 -Wall
+```
+
+### 3. Verifikasi Build
+
+Setelah build sukses, Anda akan melihat:
+
+- File executable `Klinik.exe` (Windows) atau `Klinik` (Linux/Mac)
+- Ukuran file sekitar 400-500 KB
+- Tidak ada error atau warning saat kompilasi
+
+### 4. Jalankan Aplikasi
+
+**Windows:**
+
+```powershell
+.\Klinik.exe
+```
+
+**Linux/Mac:**
+
+```bash
 ./Klinik
 ```
 
-## Prinsip OOP yang Diterapkan
+### 5. Clean Build Files (Opsional)
 
-1. **Encapsulation**: Data dan method dijadikan satu dalam class dengan access modifier (private, public, protected)
-2. **Inheritance**: Class Patient dan Doctor mewarisi dari class Person
-3. **Polymorphism**: Virtual function untuk behavior yang berbeda pada derived class
-4. **Abstraction**: Interface yang sederhana menyembunyikan kompleksitas implementasi
+Untuk menghapus file executable dan object files:
 
-## License
+```bash
+make clean
+```
 
-Academic Project - For Educational Purpose Only
+Atau manual:
+
+- **Windows**: `del Klinik.exe`
+- **Linux/Mac**: `rm Klinik`
+
+## 🚀 Cara Menggunakan Aplikasi
+
+1. **Jalankan Aplikasi**: Eksekusi file `Klinik.exe` atau `./Klinik`
+2. **Menu Utama**: Anda akan melihat menu dengan 6 pilihan
+3. **Pilih Menu**: Masukkan nomor menu (1-6)
+4. **Input Data**: Ikuti instruksi untuk input data yang diminta
+5. **Lihat Data**: Data akan otomatis dimuat dari `data/input.txt` saat pertama kali aplikasi berjalan
+6. **Auto-Save**: Semua perubahan otomatis tersimpan ke `data/output.txt` saat aplikasi ditutup
+
+### Contoh Penggunaan
+
+```
+=== CLINIC MANAGEMENT SYSTEM ===
+1. Manage Patients
+2. Manage Doctors
+3. Manage Appointments
+4. Manage Medical Records
+5. Display Statistics
+6. Exit
+
+Enter your choice: 1
+
+=== PATIENT MANAGEMENT ===
+1. Add Patient
+2. View All Patients
+3. Search Patient
+4. Update Patient
+5. Delete Patient
+6. Back to Main Menu
+
+Enter your choice: 2
+
+[Data pasien akan ditampilkan...]
+```
+
+## 🧠 Prinsip OOP yang Diterapkan
+
+| Prinsip           | Implementasi                                                                                   | Contoh                                                                                                                                                             |
+| ----------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Encapsulation** | Data dan method dijadikan satu dalam class dengan access modifier (private, public, protected) | Class `Patient` memiliki private attributes (`bloodType`, `dateOfBirth`) dan public methods (`getBloodType()`, `setBloodType()`)                                   |
+| **Inheritance**   | Class turunan mewarisi properties dan methods dari class induk                                 | `Patient` dan `Doctor` mewarisi dari class `Person` (ID, name, phone, address)                                                                                     |
+| **Polymorphism**  | Virtual function untuk behavior yang berbeda pada derived class                                | Virtual function `displayInfo()` di class `Person` yang di-override oleh `Patient` dan `Doctor`                                                                    |
+| **Abstraction**   | Interface sederhana yang menyembunyikan kompleksitas implementasi                              | Class `ClinicManager` menyediakan interface sederhana untuk operasi kompleks seperti `addPatient()`, `searchDoctor()` tanpa user perlu tahu detail implementasinya |
+
+## 📄 Format Data File
+
+### Input/Output File Format (Pipe-Delimited)
+
+**PATIENT:**
+
+```
+PATIENT|P001|John Doe|081234567890|123 Main St|1990-01-15|Male|O+
+```
+
+**DOCTOR:**
+
+```
+DOCTOR|D001|Dr. Smith|081298765432|456 Oak Ave|Cardiology|LIC123456|Mon-Fri 09:00-17:00
+```
+
+**APPOINTMENT:**
+
+```
+APPOINTMENT|A001|P001|D001|2024-12-20|09:00|Scheduled|Regular checkup
+```
+
+**MEDICALRECORD:**
+
+```
+MEDICALRECORD|MR001|A001|Hypertension|Medication: Amlodipine 5mg|2024-12-20
+```
+
+## 🔧 Troubleshooting
+
+### Error: "g++ command not found"
+
+**Solusi**: Install MinGW/MSYS2 (Windows) atau GCC (Linux/Mac)
+
+### Error: "No such file or directory: input.txt"
+
+**Solusi**: Pastikan file `data/input.txt` ada di folder `data/`
+
+### Error: "Permission denied"
+
+**Solusi Linux/Mac**: Jalankan `chmod +x Klinik` untuk memberikan permission execute
+
+### Error: Compilation failed with include errors
+
+**Solusi**: Pastikan flag `-I include` digunakan saat compile
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2025 Kistosi Al Ghifari, Fahmi Irfan Faiz, Kalya Naura Farabias
+
+---
+
+**Dikembangkan sebagai proyek mata kuliah Pemrograman Dasar**  
+Departemen Teknik Elektro dan Teknologi Informasi, Universitas Gadjah Mada  
+© 2025
