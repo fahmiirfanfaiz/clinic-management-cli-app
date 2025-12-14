@@ -31,10 +31,10 @@ Clinic Management CLI App/
 │   ├── output.txt                # Auto-generated output
 │   └── report.txt                # Generated reports
 │
-├── docs/                         # Documentation folder
-│   ├── use_case_diagram.md       # Use case diagram
-│   ├── class_diagram.md          # Class diagram
-│   └── laporan.md                # Project report
+├── docs/                                # Documentation folder
+│   ├── use_case_diagram.png             # Use case diagram
+│   ├── class_diagram.png                # Class diagram
+│   └── 515523-520563-541690_Project.pdf # Project report
 │
 ├── include/                      # Header files (.h)
 │   ├── Person.h                  # Base class for person entities
