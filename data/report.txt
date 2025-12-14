@@ -5,8 +5,8 @@
 SUMMARY:
 Total Patients        : 5
 Total Doctors         : 5
-Total Appointments    : 0
-Total Medical Records : 0
+Total Appointments    : 1
+Total Medical Records : 1
 
 
 ========================================

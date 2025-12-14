@@ -21,7 +21,7 @@ Fitur utama meliputi manajemen pasien, manajemen dokter, penjadwalan appointment
 | 2   | Fahmi Irfan Faiz     | 23/520563/TK/57396 |
 | 3   | Kalya Naura Farabias | 24/541690/TK/60097 |
 
-## � URL Video Demo dan Laporan
+## 🔗 URL Video Demo dan Laporan
 
 [📁 Tautan Google Drive Laporan Proyek](https://drive.google.com/drive/folders/1nU343sm0QTZcvXlbYDhWH-sUh0z6_rFZ?usp=drive_link)
 
@@ -323,6 +323,6 @@ Copyright (c) 2025 Kistosi Al Ghifari, Fahmi Irfan Faiz, Kalya Naura Farabias
 
 ---
 
-**Dikembangkan sebagai proyek mata kuliah Pemrograman Dasar**  
+**Dikembangkan untuk memenuhi proyek mata kuliah Pemrograman Dasar**  
 Departemen Teknik Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada 
 © 2025
