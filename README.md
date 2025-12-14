@@ -27,7 +27,7 @@ Fitur utama meliputi manajemen pasien, manajemen dokter, penjadwalan appointment
 
 [📁 Tautan Google Drive Video Demo Aplikasi](https://drive.google.com/drive/folders/1vPNhFnTwYr_h1fu4PEHFodfhGhNrLXcH?usp=drive_link)
 
-## �📂 Struktur Folder
+## 📂 Struktur Folder
 
 ```
 Clinic Management CLI App/
